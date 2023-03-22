@@ -12,7 +12,7 @@ for linha in tabela.index:
     print(produto)
     produto = produto.replace("ó", "o").replace("ã","a").replace("ç","c").replace("ú","u").replace("é","e").replace("á","a")
     
-    link = f"https://www.melhorcambio.com/{produto}-hoje"
+    link = f"https://www.melhorcambio.com/{produto}-hoje" 
     navegador.get(link)
 
     preco = navegador.find_element('xpath', '//*[@id="comercial"]').get_attribute('value')
